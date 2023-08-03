@@ -1,0 +1,18 @@
+<table>
+   <tr>
+      <th>S.NO</th>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Action</th>
+   </tr>
+   <%if(Result.length>0){%>
+    <%for(var i=0;i<Result.length;i++){%>
+        <tr>
+            <th><%= i+1%></th>
+            <th><%= Result[i].name%></th>
+            <th><img src="<%= Result[i].image %>" alt="" width="50%"></th>
+            <th><a href="/download-image?_id=<%= Result[i]._id %>">Download</a></th>
+         </tr>
+    <%}%>
+    <%}%>
+</table>
